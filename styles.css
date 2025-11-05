@@ -478,3 +478,50 @@ footer ul li a {
 footer ul li a:hover {
     color: #61dafb;
 }
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    font-size: 1.8em;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Mobile Menu Styling */
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: max-height 0.3s ease;
+}
+
+nav ul.active {
+    max-height: 500px; /* Adjust if needed */
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        background: #282c34;
+        position: absolute;
+        top: 70px; /* Adjust depending on header height */
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        max-height: 0;
+    }
+
+    nav ul li {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    /* Hide default flex navigation on mobile */
+    nav {
+        flex: 1;
+    }
+}
