@@ -13,6 +13,12 @@
         <div class="container">
             <img src="gmt logo.png" alt="Global Media Tech Logo" class="logo">
             <h1>Global Media Tech</h1>
+
+            <!-- Hamburger for Mobile -->
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+
             <nav>
                 <ul>
                     <li><a href="#home">Home</a></li>
@@ -339,6 +345,15 @@
         <p>&copy; 2024 Global Media Tech. All Rights Reserved.</p>
     </div>
 </footer>
+<script>
+    // Mobile Hamburger Toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('header nav ul');
+
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+</script>
 </body>
 </html>
 
